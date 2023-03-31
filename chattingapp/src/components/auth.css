@@ -1,0 +1,17 @@
+.auth-main{
+    display: flex;
+     /* padding: 10px; */
+    /* margin: 10px; */
+    
+    background-color: rgba(169, 101, 101, 0.505) !important;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+h3{
+    background-color: #fff;
+    color: black;
+    mix-blend-mode: screen;
+    padding: 0.5rem 1rem;
+}
