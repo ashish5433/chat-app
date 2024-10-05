@@ -1,0 +1,68 @@
+.room {
+    width: 100vw;
+    height: 100vh
+}
+
+.main--div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* top: 50%; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+/* .name--div{
+    background: #000;
+    color: wheat;
+top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+
+#input-room {
+    width: 100% !important;
+    border-radius: 2rem;
+
+    background: #00000057;
+    backdrop-filter: blur(8px);
+    text-align: center;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.281);
+    padding: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.enter-chat-btn {
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 2rem;
+    background: rgba(0, 0, 0, 0.437);
+    padding: 0.6rem 1.4rem;
+    border: none;
+    margin: 2rem;
+    transition-duration: 250ms;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+
+.enter-chat-btn:hover {
+    transform: scale(0.95);
+    background: rgba(0, 0, 0, 0.541);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.enter-chat-btn:active {
+    transform: scale(0.85);
+    background: rgba(0, 0, 0, 0.864);
+    color: rgb(255, 255, 255);
+}
+
+.name-heading {
+    font-size: 5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(255, 255, 255, 0.712);
+}
