@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { addDoc, collection, onSnapshot, serverTimestamp, query, where, orderBy } from 'firebase/firestore'
 import { db, auth } from './firebase-auth';
 import ChatArea from './components/ChatArea';
+import EnterRoom from './components/EnterRoom';
 
 
 const cookie = new Cookies()
@@ -18,29 +19,17 @@ function App() {
     setRoom(roomInputInfo.current.value)
   }
   if (!isAuth) {
-    return <div className="container-fluid main-div">
+    return <div className="container-fluid">
       <Auth setIsAuth={setIsAuth} />
     </div>
   }
   return <div>
     {room ? (<ChatArea room={room} />) :
-      (<div className="room" style={{position:"fixed",width:"100vw",height:"100vh"}}>
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
-        <center><p className={"name-heading"}  >Hello , {cookie.get("auth-name")}</p></center>
-       <div className="room-input-feild">
-        
-        <input placeholder='Enter room number...' ref={roomInputInfo} id="input-room"  ></input>
-        <div className="btn-1">
-        <button onClick={setRoomNumber} className="enter-chat-btn">Enter Chat</button>
-        <button  className="enter-chat-btn" onClick={() => {
-          cookie.remove("auth-token")
-          setIsAuth(cookie.get("auth-token"))
-        }}>Sign-out</button>
-        </div>
-        </div>
-      </div>)}
+      (  <EnterRoom
+        roomInputInfo={roomInputInfo}
+        setRoomNumber={setRoomNumber}
+        setIsAuth={setIsAuth}
+      />)}
   </div>
 }
 

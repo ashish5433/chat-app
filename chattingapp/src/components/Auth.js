@@ -2,6 +2,7 @@ import { auth, provider } from '../firebase-auth'
 import { signInWithPopup } from 'firebase/auth'
 import { useState } from 'react'
 import google from './googleImg.png'
+import bgImg from "./bg-image.jpg"
 import Cookies from 'universal-cookie'
 import './auth.css'
 const cookie = new Cookies()
@@ -25,14 +26,21 @@ export const Auth = (props) => {
     }
 
 
-    return <div className="container" style={{ width: '80%',position:'absolute',top:'3rem',left:'7%',padding:"3% 10Z%" }} ><div style={{ display: "flex", justifyContent: "center", borderRadius: "30px",alignItems:'center',flexDirection:'column' ,padding:'1.5rem'}}>
+    return <div>
+        <img src={bgImg} alt="akm" className='main--img' />
+        <div className='main--div'>
+            <div className='main--txt'>
 
-        <h3 style={{ fontFamily: "Alkatra", fontSize: "50px",textAlign:'center' }}>Welcome to myChat</h3>
-        <div className="auth-main" onClick={SignInWithGoogle}>
-            <p style={{ fontSize: "30px", margin: "auto",padding:'1rem',paddingLeft:'2rem',paddingRight:'2rem' }}> Sign In With<img style={{ width: "30px", height: "28px", marginLeft: "10px", marginTop: "0px" }} src={google} alt="" />   </p>
+                <h3>Welcome to </h3>
+                <h1>My.Chat</h1>
+            </div>
+
+            <div className="auth-main" onClick={SignInWithGoogle}>
+                <p className='Sign-in-txt'> Login with</p>
+                <img src={google} alt="" />
+            </div>
+            {/* <button onClick={SignInWithGoogle}>Sign In </button> */}
+
         </div>
-        {/* <button onClick={SignInWithGoogle}>Sign In </button> */}
-
-    </div>
     </div>
 }
