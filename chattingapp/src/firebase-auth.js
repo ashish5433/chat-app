@@ -6,11 +6,11 @@ import {getFirestore} from 'firebase/firestore'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.API_KEY,
-  authDomain: import.meta.env.AUTH_DOMAIN,
-  projectId: import.meta.env.Project_ID,
-  storageBucket: import.meta.env.Storage_Bucket,
-  messagingSenderId: import.meta.env.MSG_SEND_ID,
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_Project_ID,
+  storageBucket: process.env.REACT_APP_Storage_Bucket,
+  messagingSenderId: process.env.REACT_APP_MSG_SEND_ID,
   appId: "1:461587565463:web:192a2c1b0c3a10e84fd2d2"
 };
 
